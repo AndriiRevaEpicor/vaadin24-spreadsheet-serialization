@@ -1,0 +1,325 @@
+2024-09-05T13:08:41.959+03:00 ERROR 29516 --- [nio-8080-exec-5] s.s.s.d.SerializationDebugRequestHandler : Session serialization timed out because did not complete in 30000 ms. Increase the serialization timeout (in milliseconds) by the 'vaadin.serialization.timeout' application or system property.
+2024-09-05T13:08:41.959+03:00  INFO 29516 --- [nio-8080-exec-5] s.s.s.d.SerializationDebugRequestHandler : Session serialization attempt finished in 30003 ms with outcomes: [NOT_SERIALIZABLE_CLASSES, SERIALIZATION_TIMEOUT]
+
+NOT SERIALIZABLE CLASSES FOUND:
+===============================
+
+com.vaadin.flow.component.spreadsheet.SpreadsheetHandlerImpl
+2024-09-05T13:08:42.021+03:00 ERROR 29516 --- [ker-352371855-3] c.v.k.s.s.SessionSerializer              : Optimistic serialization of session DEBUG-SERIALIZE-D535C2E890F4F8A9BD1785240E89C41E with distributed key 43e41ecf-58b2-49f4-8323-9d593b2be36f_SOURCE:D535C2E890F4F8A9BD1785240E89C41E failed, some attribute is not serializable. Giving up immediately since the error is not recoverable
+
+java.io.NotSerializableException: java.util.WeakHashMap
+	- field (class "com.vaadin.flow.component.spreadsheet.SheetState", name: "selectedCells", type: "class java.util.WeakHashMap")
+	- object (class "com.vaadin.flow.component.spreadsheet.SheetState", com.vaadin.flow.component.spreadsheet.SheetState@4597d6c0)
+	- field (class "com.vaadin.flow.component.spreadsheet.SheetState$1", name: "this$0", type: "class com.vaadin.flow.component.spreadsheet.SheetState")
+	- object (class "com.vaadin.flow.component.spreadsheet.SheetState$1", com.vaadin.flow.component.spreadsheet.SheetState$1@71d6b00a)
+	- element of array (index: 0)
+	- array (class "[Ljava.lang.Object;", size: 1)
+	- field (class "java.lang.invoke.SerializedLambda", name: "capturedArgs", type: "class [Ljava.lang.Object;")
+	- object (class "java.lang.invoke.SerializedLambda", SerializedLambda[capturingClass=class com.vaadin.flow.component.spreadsheet.Spreadsheet, functionalInterfaceMethod=com/vaadin/flow/component/ComponentEventListener.onComponentEvent:(Lcom/vaadin/flow/component/ComponentEvent;)V, implementation=invokeInterface com/vaadin/flow/component/spreadsheet/Spreadsheet$SelectionChangeListener.onSelectionChange:(Lcom/vaadin/flow/component/spreadsheet/Spreadsheet$SelectionChangeEvent;)V, instantiatedMethodType=(Lcom/vaadin/flow/component/spreadsheet/Spreadsheet$SelectionChangeEvent;)V, numCaptured=1])
+	- field (class "com.vaadin.flow.component.ComponentEventBus$ListenerWrapper", name: "listener", type: "interface com.vaadin.flow.component.ComponentEventListener")
+	- object (class "com.vaadin.flow.component.ComponentEventBus$ListenerWrapper", com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@95fda68)
+	- custom writeObject data (class "java.util.ArrayList")
+	- object (class "java.util.ArrayList", [com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@95fda68])
+	- custom writeObject data (class "java.util.HashMap")
+	- object (class "java.util.HashMap", {class com.vaadin.flow.component.spreadsheet.Spreadsheet$SpreadsheetEvent=[com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@78d30388], class com.vaadin.flow.component.spreadsheet.Spreadsheet$SelectionChangeEvent=[com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@95fda68]})
+	- field (class "com.vaadin.flow.component.ComponentEventBus", name: "componentEventData", type: "class java.util.HashMap")
+	- object (class "com.vaadin.flow.component.ComponentEventBus", com.vaadin.flow.component.ComponentEventBus@47360a8d)
+	- field (class "com.vaadin.flow.component.Component", name: "eventBus", type: "class com.vaadin.flow.component.ComponentEventBus")
+	- object (class "com.vaadin.flow.component.spreadsheet.Spreadsheet", com.vaadin.flow.component.spreadsheet.Spreadsheet@73e5b475)
+	- field (class "com.vaadin.flow.internal.nodefeature.ComponentMapping", name: "component", type: "class com.vaadin.flow.component.Component")
+	- object (class "com.vaadin.flow.internal.nodefeature.ComponentMapping", com.vaadin.flow.internal.nodefeature.ComponentMapping@9379117)
+	- element of array (index: 3)
+	- array (class "[Lcom.vaadin.flow.internal.nodefeature.NodeFeature;", size: 13)
+	- field (class "com.vaadin.flow.internal.StateNode", name: "features", type: "interface java.io.Serializable")
+	- object (class "com.vaadin.flow.internal.StateNode", com.vaadin.flow.internal.StateNode@20b62ab9)
+	- custom writeObject data (class "java.util.ArrayList")
+	- object (class "java.util.ArrayList", [com.vaadin.flow.internal.StateNode@20b62ab9])
+	- field (class "com.vaadin.flow.internal.nodefeature.NodeList", name: "values", type: "interface java.util.List")
+	- object (class "com.vaadin.flow.internal.nodefeature.ElementChildrenList", com.vaadin.flow.internal.nodefeature.ElementChildrenList@24b27da)
+	- element of array (index: 1)
+	- array (class "[Lcom.vaadin.flow.internal.nodefeature.NodeFeature;", size: 13)
+	- field (class "com.vaadin.flow.internal.StateNode", name: "features", type: "interface java.io.Serializable")
+	- object (class "com.vaadin.flow.internal.StateNode", com.vaadin.flow.internal.StateNode@4b458d5e)
+	- custom writeObject data (class "java.util.ArrayList")
+	- object (class "java.util.ArrayList", [com.vaadin.flow.internal.StateNode@4b458d5e])
+	- field (class "com.vaadin.flow.internal.nodefeature.NodeList", name: "values", type: "interface java.util.List")
+	- object (class "com.vaadin.flow.internal.nodefeature.ElementChildrenList", com.vaadin.flow.internal.nodefeature.ElementChildrenList@598105dc)
+	- element of array (index: 1)
+	- array (class "[Lcom.vaadin.flow.internal.nodefeature.NodeFeature;", size: 2)
+	- field (class "com.vaadin.flow.internal.StateNode", name: "features", type: "interface java.io.Serializable")
+	- object (class "com.vaadin.flow.internal.StateNode", com.vaadin.flow.internal.StateNode@5a2c16fa)
+	- custom writeObject data (class "java.util.HashMap")
+	- object (class "java.util.HashMap", {1=com.vaadin.flow.internal.StateTree$RootNode@57d3ff4a, 2=com.vaadin.flow.internal.StateNode@1b49a15a, 3=com.vaadin.flow.internal.StateNode@5a2c16fa, 4=com.vaadin.flow.internal.StateNode@19cbbac2, 5=com.vaadin.flow.internal.StateNode@20b62ab9, 6=com.vaadin.flow.internal.StateNode@4b458d5e})
+	- field (class "com.vaadin.flow.internal.StateTree", name: "idToNode", type: "interface java.util.Map")
+	- object (class "com.vaadin.flow.internal.StateTree", com.vaadin.flow.internal.StateTree@23ea12fa)
+	- field (class "com.vaadin.flow.internal.StateNode", name: "owner", type: "interface com.vaadin.flow.internal.NodeOwner")
+	- object (class "com.vaadin.flow.internal.StateNode", com.vaadin.flow.internal.StateNode@19cbbac2)
+	- custom writeObject data (class "java.util.ArrayList")
+	- object (class "java.util.ArrayList", [com.vaadin.flow.internal.StateNode@19cbbac2])
+	- field (class "com.vaadin.flow.internal.nodefeature.NodeList", name: "values", type: "interface java.util.List")
+	- object (class "com.vaadin.flow.internal.nodefeature.ElementChildrenList", com.vaadin.flow.internal.nodefeature.ElementChildrenList@e207c75)
+	- element of array (index: 1)
+	- array (class "[Lcom.vaadin.flow.internal.nodefeature.NodeFeature;", size: 17)
+	- field (class "com.vaadin.flow.internal.StateNode", name: "features", type: "interface java.io.Serializable")
+	- object (class "com.vaadin.flow.internal.StateTree$RootNode", com.vaadin.flow.internal.StateTree$RootNode@57d3ff4a)
+	- field (class "com.vaadin.flow.internal.nodefeature.NodeFeature", name: "node", type: "class com.vaadin.flow.internal.StateNode")
+	- object (class "com.vaadin.flow.internal.nodefeature.ElementListenerMap", com.vaadin.flow.internal.nodefeature.ElementListenerMap@5c9de09c)
+	- field (class "com.vaadin.flow.internal.nodefeature.ElementListenerMap$DomEventListenerWrapper", name: "listenerMap", type: "class com.vaadin.flow.internal.nodefeature.ElementListenerMap")
+	- object (class "com.vaadin.flow.internal.nodefeature.ElementListenerMap$DomEventListenerWrapper", com.vaadin.flow.internal.nodefeature.ElementListenerMap$DomEventListenerWrapper@4ced8ab6)
+	- field (class "com.vaadin.flow.component.ComponentEventBus$ListenerWrapper", name: "domRegistration", type: "interface com.vaadin.flow.dom.DomListenerRegistration")
+	- object (class "com.vaadin.flow.component.ComponentEventBus$ListenerWrapper", com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@21d964)
+	- custom writeObject data (class "java.util.ArrayList")
+	- object (class "java.util.ArrayList", [com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@21d964])
+	- custom writeObject data (class "java.util.HashMap")
+	- object (class "java.util.HashMap", {class com.vaadin.flow.component.UI$BrowserNavigateEvent=[com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@21d964], class com.vaadin.flow.component.UI$BrowserLeaveNavigationEvent=[com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@5b983c19], class com.vaadin.flow.component.DetachEvent=[com.vaadin.flow.component.ComponentEventBus$ListenerWrapper@188d920d]})
+	- field (class "com.vaadin.flow.component.ComponentEventBus", name: "componentEventData", type: "class java.util.HashMap")
+	- object (class "com.vaadin.flow.component.ComponentEventBus", com.vaadin.flow.component.ComponentEventBus@1459f77e)
+	- element of array (index: 0)
+	- array (class "[Ljava.lang.Object;", size: 3)
+	- field (class "java.lang.invoke.SerializedLambda", name: "capturedArgs", type: "class [Ljava.lang.Object;")
+	- object (class "java.lang.invoke.SerializedLambda", SerializedLambda[capturingClass=class com.vaadin.flow.component.ComponentEventBus, functionalInterfaceMethod=com/vaadin/flow/server/Command.execute:()V, implementation=invokeVirtual com/vaadin/flow/component/ComponentEventBus.lambda$addListenerInternal$1c798b11$1:(Ljava/lang/Class;Lcom/vaadin/flow/component/ComponentEventBus$ListenerWrapper;)V, instantiatedMethodType=()V, numCaptured=3])
+	- field (class "com.vaadin.flow.shared.Registration$1", name: "val$command", type: "interface com.vaadin.flow.server.Command")
+	- object (class "com.vaadin.flow.shared.Registration$1", com.vaadin.flow.shared.Registration$1@f44263c)
+	- field (class "com.vaadin.flow.spring.scopes.VaadinRouteScope$NavigationListener", name: "detachListener", type: "interface com.vaadin.flow.shared.Registration")
+	- object (class "com.vaadin.flow.spring.scopes.VaadinRouteScope$NavigationListener", com.vaadin.flow.spring.scopes.VaadinRouteScope$NavigationListener@168515f2)
+	- custom writeObject data (class "java.util.HashMap")
+	- object (class "java.util.HashMap", {com.vaadin.flow.spring.scopes.VaadinRouteScope$NavigationListener=com.vaadin.flow.spring.scopes.VaadinRouteScope$NavigationListener@168515f2})
+	- field (class "com.vaadin.flow.server.Attributes", name: "attributes", type: "class java.util.HashMap")
+	- object (class "com.vaadin.flow.server.Attributes", com.vaadin.flow.server.Attributes@6252cffc)
+	- field (class "com.vaadin.flow.component.Component", name: "attributes", type: "class com.vaadin.flow.server.Attributes")
+	- object (class "com.vaadin.flow.component.UI", com.vaadin.flow.component.UI@467ee82d)
+	- custom writeObject data (class "java.util.HashMap")
+	- object (class "java.util.HashMap", {0=com.vaadin.flow.component.UI@467ee82d})
+	- custom writeObject data (class "com.vaadin.flow.server.VaadinSession")
+	- object (class "com.vaadin.flow.spring.SpringVaadinSession", com.vaadin.flow.spring.SpringVaadinSession@2b8afbf9)
+	- custom writeObject data (class "java.util.HashMap")
+	- root object (class "java.util.HashMap", {com.vaadin.flow.server.VaadinSession.springServlet=com.vaadin.flow.spring.SpringVaadinSession@2b8afbf9, springServlet.lock=java.util.concurrent.locks.ReentrantLock@aa9d5a4[Unlocked], clusterKey=43e41ecf-58b2-49f4-8323-9d593b2be36f_SOURCE:D535C2E890F4F8A9BD1785240E89C41E})
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1198) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.HashMap.internalWriteEntries(HashMap.java:1952) ~[na:na]
+	at java.base/java.util.HashMap.writeObject(HashMap.java:1505) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.HashMap.internalWriteEntries(HashMap.java:1952) ~[na:na]
+	at java.base/java.util.HashMap.writeObject(HashMap.java:1505) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.HashMap.internalWriteEntries(HashMap.java:1952) ~[na:na]
+	at java.base/java.util.HashMap.writeObject(HashMap.java:1505) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.HashMap.internalWriteEntries(HashMap.java:1952) ~[na:na]
+	at java.base/java.util.HashMap.writeObject(HashMap.java:1505) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.HashMap.internalWriteEntries(HashMap.java:1952) ~[na:na]
+	at java.base/java.util.HashMap.writeObject(HashMap.java:1505) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at com.vaadin.flow.server.VaadinSession.writeObject(VaadinSession.java:1097) ~[flow-server-24.4.7.jar:24.4.7]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at java.base/java.util.HashMap.internalWriteEntries(HashMap.java:1952) ~[na:na]
+	at java.base/java.util.HashMap.writeObject(HashMap.java:1505) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358) ~[na:na]
+	at com.vaadin.kubernetes.starter.sessiontracker.serialization.TransientInjectableObjectOutputStream.writeWithTransients(TransientInjectableObjectOutputStream.java:187) ~[kubernetes-kit-starter-2.2.2.jar:2.2.2]
+	at com.vaadin.kubernetes.starter.sessiontracker.SessionSerializer.doSerialize(SessionSerializer.java:484) ~[kubernetes-kit-starter-2.2.2.jar:2.2.2]
+	at com.vaadin.kubernetes.starter.sessiontracker.SessionSerializer.serializeOptimisticLocking(SessionSerializer.java:396) ~[kubernetes-kit-starter-2.2.2.jar:2.2.2]
+	at com.vaadin.kubernetes.starter.sessiontracker.SessionSerializer.handleSessionSerialization(SessionSerializer.java:305) ~[kubernetes-kit-starter-2.2.2.jar:2.2.2]
+	at com.vaadin.kubernetes.starter.sessiontracker.SessionSerializer.lambda$queueSerialization$5(SessionSerializer.java:287) ~[kubernetes-kit-starter-2.2.2.jar:2.2.2]
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1810) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
