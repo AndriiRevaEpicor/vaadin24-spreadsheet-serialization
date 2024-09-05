@@ -1,14 +1,15 @@
 # vaadin24-spreadsheet-serialization
 
-This project reveals an issue when we want to use Session replication along with Spreadsheet
+This Vaadin's project reveals a serialization issue when we want to use Session replication along with Vaadin Flow
+Spreadsheet.
 
 Project's skeleton was got from https://start.vaadin.com/app and used Flow/Java - Java - Maven - Spring Boot.
 JDK was used as Eclipse Temurin (AdoptOpenJDK HotSpot) 21.0.3
 
 ## Issue details
 
-When we want to use Session replication using by vaadin, kubernetes-kit and Spreadsheet then the issue will occur that
-SpreadsheetHandlerImpl doesn't serializable.
+When we want to use Session replication using by Vaadin along with kubernetes-kit and Vaadin Flow Spreadsheet then the
+issue will occur that `SpreadsheetHandlerImpl.java` doesn't serializable.
 
 Stacktrace which describe the issue will be added to the project as
 well. ([non_serializable_issue_logs.txt](non_serializable_issue_logs.txt))
